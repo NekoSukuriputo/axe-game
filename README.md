@@ -1,5 +1,5 @@
 
-# Axe Game using C++ and Raylib Libraray
+# Axe Game using C++ and Raylib Library
 
   
 
