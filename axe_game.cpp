@@ -3,16 +3,19 @@
 int main()
 {
     // Window dimentions
-    int width{350};
-    int height{200};
+    int width{800};
+    int height{450};
     InitWindow(width, height, "Axe Game Learn C++");
 
     // Circle coordinate
-    int circle_x{175};
-    int circle_y{100};
+    int circle_x{200};
+    int circle_y{200};
     int circle_radius{25};
 
-
+    // axe coordinates
+    int axe_x{400};
+    int axe_y{0};
+    
     SetTargetFPS(60);
     while (WindowShouldClose() != true)
     {
@@ -22,14 +25,18 @@ int main()
         // Game logic begins
 
         DrawCircle(circle_x, circle_y, circle_radius, BLUE);
+        DrawRectangle(axe_x, axe_y, 50, 50, RED);
 
-        if(IsKeyDown(KEY_D) && circle_x < 350)
+        // move the axe
+        axe_y += 10;
+
+        if (IsKeyDown(KEY_D) && circle_x < 350)
         {
-            circle_x = circle_x + 10;
+            circle_x += 10;
         }
-        if(IsKeyDown(KEY_A) && circle_x > 0)
+        if (IsKeyDown(KEY_A) && circle_x > 0)
         {
-            circle_x = circle_x - 10;
+            circle_x -= 10;
         }
 
         // Game login ends
