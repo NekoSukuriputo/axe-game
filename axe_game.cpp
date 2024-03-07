@@ -6,7 +6,7 @@ int main()
     int height = 200;
     InitWindow(width, height, "Axe Game Learn C++");
 
-    while (true)
+    while (WindowShouldClose() != true)
     {
         BeginDrawing();
 
