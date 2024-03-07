@@ -2,5 +2,17 @@
 
 int main()
 {
-    InitWindow(350, 200, "Axe Game Learn C++");
+    int width = 350;
+    int height = 200;
+    InitWindow(width, height, "Axe Game Learn C++");
+
+    while (true)
+    {
+        BeginDrawing();
+
+        ClearBackground(RED);
+
+        EndDrawing();
+    }
+    
 }
